@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= stylesheet_link_tag "possible-sequel" %>
     <title>PossibleSequel</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +11,20 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class="navbar">
+      <%= link_to "possible-sequal", products_path, class: "navbar-brand" %>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <%= link_to 'ADD CLASS LINK HERE', add_class_path, class:"nav-item nav-link" %>
+          <%= link_to 'ADD CLASS LINK HERE', add_class_path, class:"nav-item nav-link" %>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <%= yield %>
+
+    </div>
   </body>
 </html>
